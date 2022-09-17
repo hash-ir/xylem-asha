@@ -13,21 +13,21 @@ __pycache__
 /Xylem-material-react-app/coverage
 
 # production
-Xylem-material-react-app/build
-Xylem-material-react-app/out
-.Xylem-material-react-app/next
+/Xylem-material-react-app/build
+/Xylem-material-react-app/out
+/Xylem-material-react-app/.next
 
 # misc
-Xylem-material-react-app/.DS_Store
-Xylem-material-react-app/.eslintcache
-Xylem-material-react-app/.idea
-Xylem-material-react-app/.env
-Xylem-material-react-app/.env.local
-Xylem-material-react-app/.env.development.local
-Xylem-material-react-app/.env.test.local
-Xylem-material-react-app/.env.production.local
+/Xylem-material-react-app/.DS_Store
+/Xylem-material-react-app/.eslintcache
+/Xylem-material-react-app/.idea
+/Xylem-material-react-app/.env
+/Xylem-material-react-app/.env.local
+/Xylem-material-react-app/.env.development.local
+/Xylem-material-react-app/.env.test.local
+/Xylem-material-react-app/.env.production.local
 
-Xylem-material-react-app/npm-debug.log*
-Xylem-material-react-app/yarn-debug.log*
-Xylem-material-react-app/yarn-error.log*
+/Xylem-material-react-app/npm-debug.log*
+/Xylem-material-react-app/yarn-debug.log*
+/Xylem-material-react-app/yarn-error.log*
 
