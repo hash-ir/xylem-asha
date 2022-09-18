@@ -42,14 +42,11 @@
 
 <body>
 
-
-
-
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="{{ url_for('index') }}"><img src="../static/images/logo.png"
+        <a class="navbar-brand brand-logo" href="{{ url_for('index') }}"><img src="../static/images/logo.svg"
             alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="{{ url_for('index') }}"><img src="../static/images/logo.png"
             alt="logo" /></a>
@@ -77,7 +74,7 @@
                 <span class="availability-status online"></span>
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black">Hashir Ahmad</p>
               </div>
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -88,11 +85,7 @@
                 <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
             </div>
           </li>
-          <li class="nav-item d-none d-lg-block full-screen-link">
-            <a class="nav-link">
-              <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-            </a>
-          </li>
+         
           <!-- <li class="nav-item dropdown">
               <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="mdi mdi-email-outline"></i>
@@ -134,55 +127,7 @@
                 <h6 class="p-3 mb-0 text-center">4 new messages</h6>
               </div>
             </li> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
-              data-bs-toggle="dropdown">
-              <i class="mdi mdi-bell-outline"></i>
-              <span class="count-symbol bg-danger"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-              aria-labelledby="notificationDropdown">
-              <h6 class="p-3 mb-0">Notifications</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="mdi mdi-calendar"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                  <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
-                  <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-warning">
-                    <i class="mdi mdi-settings"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                  <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-                  <p class="text-gray ellipsis mb-0"> Update dashboard </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-info">
-                    <i class="mdi mdi-link-variant"></i>
-                  </div>
-                </div>
-                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                  <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-                  <p class="text-gray ellipsis mb-0"> New admin wow! </p>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <h6 class="p-3 mb-0 text-center">See all notifications</h6>
-            </div>
-          </li>
+          
           <li class="nav-item nav-logout d-none d-lg-block">
             <a class="nav-link" href="#">
               <i class="mdi mdi-power"></i>
@@ -203,24 +148,59 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:../../partials/_sidebar.html -->
-      
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+        
+          
+            
+          
+          </li>
+        </ul>
+      </nav>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-
-          <div class="col-md-4 stretch-card grid-margin">
+          <h3>Available opportunities</h3>
+          <div class="row">
+          <div class="col-12 stretch-card grid-margin">
             <div class="card bg-gradient-danger card-img-holder text-white">
               <div class="card-body">
-                <!-- <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" /> -->
-                <!-- <h4 class="font-weight-normal mb-3">Weekly Sales <i class="mdi mdi-chart-line mdi-24px float-right"></i> -->
-                <!-- </h4> -->
-                <h2 class="mb-5">Thanks, for taking the quiz. You have earned {{ score }} Water Score. Come back tomorrow to earn more and create awareness!!</h2>
+                <h4>Public demonstrations</h4>
                 <!-- <h6 class="card-text">Increased by 60%</h6> -->
+                <br>
+                <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: left;"><i class="mdi mdi-close"></i></button>
+              <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: right;"><i class="mdi mdi-check"></i></button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+              <div class="card-body">
+                <h4>Promoter of water technology solutions</h4>
+                <!-- <h6 class="card-text">Increased by 60%</h6> -->
+                <br>
+                <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: left;"><i class="mdi mdi-close"></i></button>
+              <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: right;"><i class="mdi mdi-check"></i></button>
               </div>
             </div>
           </div>
-          
-    
+        </div>
+        <div class="row">
+          <div class="col-12 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+              <div class="card-body">
+                <h4>Spreading awareness about water consumption in your neighborhood</h4>
+                <!-- <h6 class="card-text">Increased by 60%</h6> -->
+                <br>
+                <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: left;"><i class="mdi mdi-close"></i></button>
+              <button type="submit" class="btn btn-social-icon btn-outline-facebook" id='next' style="float: right;"><i class="mdi mdi-check"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         </div>
         <!-- content-wrapper ends -->

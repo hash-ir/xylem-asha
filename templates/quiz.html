@@ -42,16 +42,13 @@
 
 <body>
 
-
-
-
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo" href="{{ url_for('index') }}"><img src="../static/images/logo.svg"
             alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="{{ url_for('index') }}"><img src="../static/images/logo-mini.svg"
+        <a class="navbar-brand brand-logo-mini" href="{{ url_for('index') }}"><img src="../static/images/logo.png"
             alt="logo" /></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -73,11 +70,11 @@
             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
               aria-expanded="false">
               <div class="nav-profile-img">
-                <img src="../static/images/faces/face1.jpg" alt="image">
+                <img src="../static/images/avatar.png" alt="image">
                 <span class="availability-status online"></span>
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black">Hashir Ahmad</p>
               </div>
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -220,6 +217,7 @@
                   <input type="radio" class="form-check-input" name="comp_select" id="optionsRadios4" value="{{ options_label[3] }}" > {{ options_label[3] }} </label>
               </div>
             </div>
+            <!-- <p class="card-description">{{ fact }}</p> -->
               <!-- <button type="button" class="btn btn-gradient-primary btn-fw" style="width: 100%;">Light</button>
             <br>
             <button type="button" class="btn btn-gradient-primary btn-fw" style="width: 100%;">Light</button>

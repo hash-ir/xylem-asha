@@ -26,17 +26,29 @@ Session(app)
 #         return '<User %r>' % self.username
 
 questions = {
-    1: "What is your company's name?",
-    2: "Where are you based?",
-    3: "How many employees do you have?",
-    4: "What is your current iPERL Water Meter's reading?",
+    1: "How much water is there on Earth?",
+    2: "How much of the all the water on the planet is fresh?",
+    3: "How much water does an average home use in a day?",
+    4: "What does Xylem do?",
+    5: "What are the main stages in the water cycle?",
 }
 
 options = {
-    1: ["aman", "varshney", "aligarh", "india"],
-    2: ["hashir", "ahmad", "aligarh", "india"],
-    3: ["avantika", "gupta", "bangalore", "india"],
-    4: ["shaharyar", "shaukat", "jamsedhpur", "india"]
+    1: ["70%", "40%", "90%", "10%"],
+    2: ["Less than 5%", "5-10%", "10-20%", "More than 20%"],
+    3: ["50 gallons", "2 gallons", "100 gallons", "1,000 gallons"],
+    4: ["Water technology provider, creating innovative and smart solutions", "Yes, we use it in our workplace but I don't know much", "I have never heard about Xylem", "I don't care"],
+    5: ["Evaporation, condensation, precipitation", 
+        "Condensation, precipitation, irrigation",
+        "Distribution, condensation, precipitation","Motion, harvestation, precipitation"],
+}
+
+facts = {
+    1: "70% of the Earth's surface is covered by water.",
+    2: "Nearly 97% of the world’s water is salty or otherwise undrinkable. Another 2% is locked in ice caps and glaciers. That leaves just 1% for all of humanity’s needs",
+    3: "The average American uses 100 gallons of water per day.",
+    4: "Xylem is a leading global water technology company committed to developing innovative technology solutions to the world’s water challenges.",
+    5: "The water cycle is the continuous movement of water on, above and below the surface of the Earth. The water cycle involves the evaporation and transpiration of water from Earth's surface (including the oceans), the condensation of water vapor into water droplets, and the precipitation of water in all forms (rain, snow, sleet, hail etc.) and the return of water to Earth's surface through runoff, drainage and groundwater recharge.",
 }
 answers = []
 i = 1
@@ -51,6 +63,19 @@ def login(): # define login page fucntion
 @app.route('/register', methods=['GET'])# we define the sign up path
 def register(): # define the sign up function
        return render_template('register.html')
+
+@app.route('/volunteer', methods=['GET'])# we define the sign up path
+def volunteer(): # define the sign up function
+       return render_template('opportunities.html')
+
+
+@app.route('/stats', methods=['GET'])# we define the sign up path
+def stats(): # define the sign up function
+       return render_template('stats.html')
+
+@app.route('/peerstats', methods=['GET'])# we define the sign up path
+def peerstats(): # define the sign up function
+       return render_template('peerstats.html')
 
 ####################################################################@auth.route('/logout') # define logout path
 def logout(): #define the logout function
@@ -70,7 +95,6 @@ def onboard():
     if request.method == 'POST':
         data = request.form
         answer = data.get('answer', 'default')
-        # print(answer)
         answers.append(answer)
         print(answers)
         btn_label = 'Next' if i < len(questions) else 'Submit'
@@ -107,7 +131,7 @@ def riddle():
             # answer = data.get('answer', 'default')
             # print(answer)
             answers.append(answer)
-            print(answers)
+            # print(answers)
             # btn_label = 'Next' if i < len(questions) else 'Submit'
             print('In POST')
             i += 1
@@ -128,11 +152,20 @@ def riddle():
 
                 answers = []
                     
-                return render_template("quiz_thanks.html", score = score)
+                return render_template("quiz_thanks.html", score=score)
             else:
+                data = request.form
+                answer = data.get('comp_select', None)
+                print(answer)
+                if answer is None or i == 1:
+                    fact = ''
+                else:
+                    fact = facts[i]
+
                 return render_template('quiz.html', question_label=questions[i], options_label=options[i])
         else:
-            return render_template('quiz.html', question_label=questions[i], options_label=options[i])
+            return render_template('quiz.html', question_label=questions[1], options_label=options[1])
+
     except Exception as e:
         print(e)
         # else:
@@ -153,7 +186,7 @@ Paragraph: Water regulates the Earth’s temperature. It also regulates the temp
 Question: What does water do? Answer: It regulates the Earth’s temperature
 
 Paragraph: Nearly 97% of the world’s water is salty or otherwise undrinkable. Another 2% is locked in ice caps and glaciers. That leaves just 1% for all of humanity’s needs — all its agricultural, residential, manufacturing, community, and personal needs. Hence, water consumption is very necessary.
-Question: Why is water consumption necessary? Answer: Only 1% of the world’s water is available for all of humanity’s needs — its agricultural, residential, manufacturing, community, and personal needs
+Question: Why is water conservation necessary? Answer: Only 1% of the world’s water is available for all of humanity’s needs — its agricultural, residential, manufacturing, community, and personal needs
 
 Paragraph: The average total home water use for each person in the U.S. is about 50 gallons a day.
 The average cost for water supplied to a home in the U.S. is about $2.00 for 1,000 gallons, which equals about 5 gallons for a penny.
