@@ -12,27 +12,26 @@ import {
 
 const states = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'bayern',
+    label: 'Bayern'
   },
   {
-    value: 'new-york',
-    label: 'New York'
+    value: 'berlin',
+    label: 'Berlin'
   },
   {
-    value: 'san-francisco',
-    label: 'San Francisco'
+    value: 'NRW',
+    label: 'NRW'
   }
 ];
 
 export const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    firstName: 'Munich Re',
+    website: 'www.munichre.de',
+    phone: '+49 151 0567469',
+    state: 'Bayern',
+    country: 'Germany'
   });
 
   const handleChange = (event) => {
@@ -51,7 +50,7 @@ export const AccountProfileDetails = (props) => {
       <Card>
         <CardHeader
           subheader="The information can be edited"
-          title="Profile"
+          title="Company Profile"
         />
         <Divider />
         <CardContent>
@@ -66,8 +65,7 @@ export const AccountProfileDetails = (props) => {
             >
               <TextField
                 fullWidth
-                helperText="Please specify the first name"
-                label="First name"
+                label="Name"
                 name="firstName"
                 onChange={handleChange}
                 required
@@ -82,26 +80,11 @@ export const AccountProfileDetails = (props) => {
             >
               <TextField
                 fullWidth
-                label="Last name"
-                name="lastName"
+                label="Website"
+                name="website"
                 onChange={handleChange}
                 required
-                value={values.lastName}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-            >
-              <TextField
-                fullWidth
-                label="Email Address"
-                name="email"
-                onChange={handleChange}
-                required
-                value={values.email}
+                value={values.website}
                 variant="outlined"
               />
             </Grid>

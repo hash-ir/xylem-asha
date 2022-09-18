@@ -56,11 +56,6 @@ export const DashboardNavbar = (props) => {
             </IconButton>
           </Tooltip>
           <Box sx={{ flexGrow: 1 }} />
-          <Tooltip title="Contacts">
-            <IconButton sx={{ ml: 1 }}>
-              <UsersIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
           <Tooltip title="Notifications">
             <IconButton sx={{ ml: 1 }}>
               <Badge
@@ -81,7 +76,7 @@ export const DashboardNavbar = (props) => {
               width: 40,
               ml: 1
             }}
-            src="/static/images/avatars/avatar_1.png"
+            src="/static/images/avatars/companyIcon.jpg"
           >
             <UserCircleIcon fontSize="small" />
           </Avatar>

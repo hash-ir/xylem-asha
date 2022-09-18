@@ -3,142 +3,92 @@ import { v4 as uuid } from 'uuid';
 export const customers = [
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'West Virginia',
-      city: 'Parkersburg',
-      street: '2849 Fulton Street'
-    },
+    points: 94,
     avatarUrl: '/static/images/avatars/avatar_3.png',
-    createdAt: 1555016400000,
+    lastAct: 'activity 1',
     email: 'ekaterina.tankova@devias.io',
     name: 'Ekaterina Tankova',
-    phone: '304-428-3097'
+    badge: 'Platinum'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Bristow',
-      city: 'Iowa',
-      street: '1865  Pleasant Hill Road'
-    },
+    points: 92,
     avatarUrl: '/static/images/avatars/avatar_4.png',
-    createdAt: 1555016400000,
+    lastAct: 'activity 2',
     email: 'cao.yu@devias.io',
     name: 'Cao Yu',
-    phone: '712-351-5711'
+    badge: 'Platinum'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Georgia',
-      city: 'Atlanta',
-      street: '4894  Lakeland Park Drive'
-    },
+    points: 88,
     avatarUrl: '/static/images/avatars/avatar_2.png',
-    createdAt: 1555016400000,
+    lastAct: 'activity 1',
     email: 'alexa.richardson@devias.io',
     name: 'Alexa Richardson',
-    phone: '770-635-2682'
+    badge: 'Gold'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Ohio',
-      city: 'Dover',
-      street: '4158  Hedge Street'
-    },
+    points: 85,
     avatarUrl: '/static/images/avatars/avatar_5.png',
-    createdAt: 1554930000000,
+    lastAct: 'activity 3',
     email: 'anje.keizer@devias.io',
     name: 'Anje Keizer',
-    phone: '908-691-3242'
+    badge: 'Gold'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Texas',
-      city: 'Dallas',
-      street: '75247'
-    },
+    points: 85,
     avatarUrl: '/static/images/avatars/avatar_6.png',
-    createdAt: 1554757200000,
+    lastAct: 'activity 5',
     email: 'clarke.gillebert@devias.io',
     name: 'Clarke Gillebert',
-    phone: '972-333-4106'
+    badge: 'Gold'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'California',
-      city: 'Bakerfield',
-      street: '317 Angus Road'
-    },
+    points: 80,
     avatarUrl: '/static/images/avatars/avatar_1.png',
-    createdAt: 1554670800000,
+    lastAct: 'activity 2',
     email: 'adam.denisov@devias.io',
     name: 'Adam Denisov',
-    phone: '858-602-3409'
+    badge: 'Gold'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'California',
-      city: 'Redondo Beach',
-      street: '2188  Armbrester Drive'
-    },
+    points: 78,
     avatarUrl: '/static/images/avatars/avatar_7.png',
-    createdAt: 1554325200000,
+    lastAct: 'activity 3',
     email: 'ava.gregoraci@devias.io',
     name: 'Ava Gregoraci',
-    phone: '415-907-2647'
+    badge: 'Silver'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Nevada',
-      city: 'Las Vegas',
-      street: '1798  Hickory Ridge Drive'
-    },
+    points: 75,
     avatarUrl: '/static/images/avatars/avatar_8.png',
-    createdAt: 1523048400000,
+    lastAct: 'activity 5',
     email: 'emilee.simchenko@devias.io',
     name: 'Emilee Simchenko',
-    phone: '702-661-1654'
+    badge: 'Silver'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Michigan',
-      city: 'Detroit',
-      street: '3934  Wildrose Lane'
-    },
+    points: 70,
     avatarUrl: '/static/images/avatars/avatar_9.png',
-    createdAt: 1554702800000,
+    lastAct: 'activity 4',
     email: 'kwak.seong.min@devias.io',
     name: 'Kwak Seong-Min',
-    phone: '313-812-8947'
+    badge: 'Silver'
   },
   {
     id: uuid(),
-    address: {
-      country: 'USA',
-      state: 'Utah',
-      city: 'Salt Lake City',
-      street: '368 Lamberts Branch Road'
-    },
+    points: 70,
     avatarUrl: '/static/images/avatars/avatar_10.png',
-    createdAt: 1522702800000,
+    lastAct: 'activity 5',
     email: 'merrile.burgett@devias.io',
     name: 'Merrile Burgett',
-    phone: '801-301-7894'
+    badge: 'Silver'
   }
 ];

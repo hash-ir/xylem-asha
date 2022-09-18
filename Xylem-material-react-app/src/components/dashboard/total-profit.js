@@ -1,5 +1,5 @@
-import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { Avatar, Box,Card, CardContent, Grid, Typography } from '@mui/material';
+import WaterIcon from '@mui/icons-material/Opacity';
 
 export const TotalProfit = (props) => (
   <Card {...props}>
@@ -15,13 +15,13 @@ export const TotalProfit = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL PROFIT
+            TOTAL WATER SAVED
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            $23k
+            2000 gal
           </Typography>
         </Grid>
         <Grid item>
@@ -32,10 +32,25 @@ export const TotalProfit = (props) => (
               width: 56
             }}
           >
-            <AttachMoneyIcon />
+            <WaterIcon />
           </Avatar>
         </Grid>
       </Grid>
+      <Box
+        sx={{
+          pt: 2,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+    
+        <Typography
+          color="textSecondary"
+          variant="caption"
+        >
+          Since last quarter
+        </Typography>
+      </Box>
     </CardContent>
   </Card>
 );

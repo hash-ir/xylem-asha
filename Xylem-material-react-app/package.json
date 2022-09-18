@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0"
+    "eslint-config-next": "12.3.0",
+    "nodemon": "^2.0.20"
   }
 }

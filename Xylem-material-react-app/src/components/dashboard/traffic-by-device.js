@@ -1,8 +1,8 @@
 import { Doughnut } from 'react-chartjs-2';
 import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } from '@mui/material';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import PhoneIcon from '@mui/icons-material/Phone';
-import TabletIcon from '@mui/icons-material/Tablet';
+import WcIcon from '@mui/icons-material/Wc';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import CountertopsIcon from '@mui/icons-material/Countertops';
 
 export const TrafficByDevice = (props) => {
   const theme = useTheme();
@@ -17,7 +17,7 @@ export const TrafficByDevice = (props) => {
         hoverBorderColor: '#FFFFFF'
       }
     ],
-    labels: ['Desktop', 'Tablet', 'Mobile']
+    labels: ['WashRoom', 'Pantry', 'Miscellaneous']
   };
 
   const options = {
@@ -44,28 +44,28 @@ export const TrafficByDevice = (props) => {
 
   const devices = [
     {
-      title: 'Desktop',
+      title: 'WashRoom',
       value: 63,
-      icon: LaptopMacIcon,
+      icon: WcIcon,
       color: '#3F51B5'
     },
     {
-      title: 'Tablet',
+      title: 'Pantry',
       value: 15,
-      icon: TabletIcon,
+      icon: CountertopsIcon,
       color: '#E53935'
     },
     {
-      title: 'Mobile',
+      title: 'Miscellaneous',
       value: 23,
-      icon: PhoneIcon,
+      icon: MiscellaneousServicesIcon,
       color: '#FB8C00'
     }
   ];
 
   return (
     <Card {...props}>
-      <CardHeader title="Traffic by Device" />
+      <CardHeader title="Water Consumptions by Divisions" />
       <Divider />
       <CardContent>
         <Box

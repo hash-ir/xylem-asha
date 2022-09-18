@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Avatar, Box, Card, CardContent, Divider, Grid, Typography } from '@mui/material';
-import { Clock as ClockIcon } from '../../icons/clock';
-import { Download as DownloadIcon } from '../../icons/download';
+import GroupsIcon from '@mui/icons-material/Groups';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export const ProductCard = ({ product, ...rest }) => (
   <Card
@@ -57,14 +57,14 @@ export const ProductCard = ({ product, ...rest }) => (
             display: 'flex'
           }}
         >
-          <ClockIcon color="action" />
+          <CalendarMonthIcon color="action" />
           <Typography
             color="textSecondary"
             display="inline"
             sx={{ pl: 1 }}
             variant="body2"
           >
-            Updated 2hr ago
+            {product.createdAt}
           </Typography>
         </Grid>
         <Grid
@@ -74,7 +74,7 @@ export const ProductCard = ({ product, ...rest }) => (
             display: 'flex'
           }}
         >
-          <DownloadIcon color="action" />
+          <GroupsIcon color="action" />
           <Typography
             color="textSecondary"
             display="inline"
@@ -83,7 +83,7 @@ export const ProductCard = ({ product, ...rest }) => (
           >
             {product.totalDownloads}
             {' '}
-            Downloads
+            Participants
           </Typography>
         </Grid>
       </Grid>

@@ -10,12 +10,11 @@ import {
 } from '@mui/material';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith',
-  timezone: 'GTM-7'
+  avatar: '/static/images/avatars/companyIcon.jpg',
+  city: 'Munich',
+  country: 'Germany',
+  name: '',
+  
 };
 
 export const AccountProfile = (props) => (
@@ -49,23 +48,10 @@ export const AccountProfile = (props) => (
         >
           {`${user.city} ${user.country}`}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body2"
-        >
-          {user.timezone}
-        </Typography>
       </Box>
     </CardContent>
     <Divider />
     <CardActions>
-      <Button
-        color="primary"
-        fullWidth
-        variant="text"
-      >
-        Upload picture
-      </Button>
     </CardActions>
   </Card>
 );

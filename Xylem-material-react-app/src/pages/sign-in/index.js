@@ -261,15 +261,8 @@ const Page = () => {
                     )}
                     {tab === 'phoneNumber' && (
                       <div>
-                        <Typography
-                          sx={{ mb: 1 }}
-                          variant="h6"
-                        >
-                          Not available in the demo
-                        </Typography>
-                        <Typography color="text.secondary">
-                          Zalter Identity does support SMS passcodes, but to prevent unnecessary costs we disabled this feature in the demo.
-                        </Typography>
+                        
+                      
                       </div>
                     )}
                   </div>
